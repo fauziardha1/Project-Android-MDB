@@ -7,6 +7,11 @@
         android:title="Data Karyawan"
         app:showAsAction="never"/>
     <item
+        android:id="@+id/data_office"
+        android:title="Data Kantor"
+        app:showAsAction="never"/>
+
+    <item
         android:id="@+id/tentang_app"
         android:title="Tentang Apps"
         app:showAsAction="never"

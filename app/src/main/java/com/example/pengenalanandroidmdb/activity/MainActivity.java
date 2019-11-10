@@ -62,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.keluar:
                 startActivity( new Intent(MainActivity.this, LoginActivity.class));
                 break;
+            case R.id.data_office:
+                startActivity(new Intent(getApplicationContext(),ShowAllOfficeActivity.class));
+                break;
+
         }
 
         return true;
