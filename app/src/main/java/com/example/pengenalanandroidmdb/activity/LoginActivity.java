@@ -73,6 +73,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent toLupaPassword = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
                 startActivity(toLupaPassword);
+                finish();
             }
         });
     }
