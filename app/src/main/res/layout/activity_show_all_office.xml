@@ -12,7 +12,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/biru">
+        android:background="@color/colorPrimary">
 
         <ImageButton
             android:id="@+id/imgBtnBack"
@@ -32,12 +32,12 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Halaman Office"
-        android:textSize="30sp"
-        android:gravity="center"/>
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Halaman Office"-->
+<!--        android:textSize="30sp"-->
+<!--        android:gravity="center"/>-->
 
     <include
         android:id="@+id/wrongViewOffice"

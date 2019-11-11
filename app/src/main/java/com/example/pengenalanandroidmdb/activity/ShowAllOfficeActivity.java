@@ -45,6 +45,7 @@ public class ShowAllOfficeActivity extends AppCompatActivity {
         service = API.getClient().create(Service.class);
         shimmerLayout   = findViewById(R.id.shimmerLayout);
         wrongView       = findViewById(R.id.wrongViewOffice);
+        getSupportActionBar().hide();
 
         imgbtnBack.setOnClickListener(new View.OnClickListener() {
             @Override

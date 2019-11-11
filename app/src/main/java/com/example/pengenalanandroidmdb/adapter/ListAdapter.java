@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.pengenalanandroidmdb.model.DownloadImageFromInternet;
 import com.example.pengenalanandroidmdb.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -73,7 +74,7 @@ public class ListAdapter extends BaseAdapter {
                 tvEmployeeAddress.setText(empList.get("address"));
                 tvEmployeeGender.setText(empList.get("gender"));
                 String imgUrl = empList.get("base_url");
-                new DownloadImageFromInternet(imgEmployee).execute(imgUrl);
+                Picasso.get().load(imgUrl).into(imgEmployee);
 
 
                 break;
