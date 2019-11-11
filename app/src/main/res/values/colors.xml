@@ -11,4 +11,5 @@
     <color name="biru">#5CC3EF</color>
     <color name="putih">#FFFFFF</color>
     <color name="abu">#C4C4C4</color>
+    <color name="placeholder_color">#C9C9C9</color>
 </resources>

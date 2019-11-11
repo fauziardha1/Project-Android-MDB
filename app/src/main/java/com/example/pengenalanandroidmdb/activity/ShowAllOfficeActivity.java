@@ -4,6 +4,8 @@ package com.example.pengenalanandroidmdb.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import io.supercharge.shimmerlayout.ShimmerLayout;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -29,6 +31,7 @@ public class ShowAllOfficeActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     Service service;
     ImageButton imgbtnBack;
+    ShimmerLayout shimmerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class ShowAllOfficeActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycler);
         imgbtnBack = findViewById(R.id.imgBtnBack);
         service = API.getClient().create(Service.class);
+        shimmerLayout   = findViewById(R.id.shimmerLayout);
 
         imgbtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +50,7 @@ public class ShowAllOfficeActivity extends AppCompatActivity {
             }
         });
 
+        shimmerLayout.startShimmerAnimation(); // jalankan shimmer layout
         Call<JsonObject> getOffice = service.getOffice();
         getOffice.enqueue(new Callback<JsonObject>() {
             @Override
@@ -71,14 +76,18 @@ public class ShowAllOfficeActivity extends AppCompatActivity {
                         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                         recyclerView.setHasFixedSize(true);
                         recyclerView.setAdapter(new RecyclerViewAdapter(getApplicationContext(), arrayList));
+                        shimmerLayout.stopShimmerAnimation();       // stop shimmer layout
+                        shimmerLayout.setVisibility(View.GONE);     //  hilangkan shimmer layout
                     } else {
                         Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                        shimmerLayout.stopShimmerAnimation();       // stop shimmer layout
                     }
                 }
             }
 
             @Override
             public void onFailure(Call<JsonObject> call, Throwable t) {
+                shimmerLayout.stopShimmerAnimation();       // stop shimmer layout
 
             }
         });

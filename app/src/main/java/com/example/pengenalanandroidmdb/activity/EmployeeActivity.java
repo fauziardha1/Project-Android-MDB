@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
+import io.supercharge.shimmerlayout.ShimmerLayout;
 
 import com.example.pengenalanandroidmdb.adapter.ListAdapter;
 import com.example.pengenalanandroidmdb.R;
@@ -36,6 +37,9 @@ public class EmployeeActivity extends AppCompatActivity {
     // Declare ArrayList
     ArrayList<HashMap<String,String>> dataKaryawan_arrayList = new ArrayList<HashMap<String, String>>();
 
+    //Declare ShrimmerLayout
+    private ShimmerLayout shimmerLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +49,10 @@ public class EmployeeActivity extends AppCompatActivity {
         rest_class = new RestProcess();
 
         lvDataKaryawan = findViewById(R.id.listview_employee);
+        shimmerLayout   = findViewById(R.id.shimmerLayout);
 
+
+        shimmerLayout.startShimmerAnimation();             //menjalankan animasi dari shimmerLayout
         getDataKaryawan(lvDataKaryawan);
     }
 
@@ -86,6 +93,7 @@ public class EmployeeActivity extends AppCompatActivity {
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
 
                 Toast.makeText(EmployeeActivity.this,"Koneksi Gagal ! 2",Toast.LENGTH_LONG).show();
+                shimmerLayout.stopShimmerAnimation();
 
             }
         });
@@ -105,15 +113,19 @@ public class EmployeeActivity extends AppCompatActivity {
                 dataKaryawan_arrayList.remove(0);
                 adapter = new ListAdapter(EmployeeActivity.this,dataKaryawan_arrayList,1);
                 lvDataKaryawan.setAdapter(adapter);
+                shimmerLayout.stopShimmerAnimation();
+                shimmerLayout.setVisibility(View.GONE);
                 Toast.makeText(EmployeeActivity.this,"Koneksi Berhasil !",Toast.LENGTH_LONG).show();
 
             } else {
                 Toast.makeText(EmployeeActivity.this,"Koneksi Gagal ! 3",Toast.LENGTH_LONG).show();
+                shimmerLayout.stopShimmerAnimation();
 
             }
 
         } catch (JSONException e) {
             Toast.makeText(EmployeeActivity.this,"Koneksi Gagal ! 4",Toast.LENGTH_LONG).show();
+            shimmerLayout.stopShimmerAnimation();
         }
     }
 
