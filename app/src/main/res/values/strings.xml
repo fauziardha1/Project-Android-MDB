@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PengenalanAndroidMDB</string>
+    <string name="app_name">MDB</string>
     <string name="login_karyawan">Login Karyawan</string>
     <string name="username">Username</string>
     <string name="password">Password</string>

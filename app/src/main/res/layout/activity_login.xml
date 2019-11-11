@@ -12,7 +12,7 @@
         android:layout_height="120dp"
         android:src="@drawable/mdb"
         android:layout_gravity="center"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="10dp"/>
 
     <TextView
@@ -44,7 +44,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="@color/lupa_password"
-        android:hint="Usename"
+        android:hint="Username"
         />
     <TextView
         android:layout_width="match_parent"
@@ -54,18 +54,18 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         />
+
     <EditText
         android:id="@+id/editText_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="40dp"
-        android:inputType="numberPassword"
-        android:maxLength="4"
         android:backgroundTint="@color/lupa_password"
         android:hint="@string/password"
-        />
+        android:inputType="numberPassword"
+        android:maxLength="4" />
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
