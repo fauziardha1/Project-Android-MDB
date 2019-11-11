@@ -7,6 +7,10 @@
     tools:context=".activity.EmployeeActivity"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <include
+        android:id="@+id/wrong"
+        layout="@layout/somethings_wrong"/>
+
     <io.supercharge.shimmerlayout.ShimmerLayout
         android:id="@+id/shimmerLayout"
         android:layout_width="match_parent"

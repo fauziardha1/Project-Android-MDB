@@ -39,6 +39,11 @@
         android:textSize="30sp"
         android:gravity="center"/>
 
+    <include
+        android:id="@+id/wrongViewOffice"
+        layout="@layout/somethings_wrong"/>
+
+
     <io.supercharge.shimmerlayout.ShimmerLayout
         android:id="@+id/shimmerLayout"
         android:layout_width="match_parent"
@@ -62,6 +67,11 @@
 
         </LinearLayout>
     </io.supercharge.shimmerlayout.ShimmerLayout>
+
+
+
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler"

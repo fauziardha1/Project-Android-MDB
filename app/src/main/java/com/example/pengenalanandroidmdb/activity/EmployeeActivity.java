@@ -40,6 +40,8 @@ public class EmployeeActivity extends AppCompatActivity {
     //Declare ShrimmerLayout
     private ShimmerLayout shimmerLayout;
 
+    private View wrongView ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,8 @@ public class EmployeeActivity extends AppCompatActivity {
 
         lvDataKaryawan = findViewById(R.id.listview_employee);
         shimmerLayout   = findViewById(R.id.shimmerLayout);
+        wrongView       = findViewById(R.id.wrong);
+        wrongView.setVisibility(View.GONE);
 
 
         shimmerLayout.startShimmerAnimation();             //menjalankan animasi dari shimmerLayout
@@ -94,6 +98,8 @@ public class EmployeeActivity extends AppCompatActivity {
 
                 Toast.makeText(EmployeeActivity.this,"Koneksi Gagal ! 2",Toast.LENGTH_LONG).show();
                 shimmerLayout.stopShimmerAnimation();
+                shimmerLayout.setVisibility(View.GONE);
+                wrongView.setVisibility(View.VISIBLE);
 
             }
         });
@@ -120,12 +126,18 @@ public class EmployeeActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(EmployeeActivity.this,"Koneksi Gagal ! 3",Toast.LENGTH_LONG).show();
                 shimmerLayout.stopShimmerAnimation();
+                shimmerLayout.setVisibility(View.GONE);
+                wrongView.setVisibility(View.VISIBLE);
+
 
             }
 
         } catch (JSONException e) {
             Toast.makeText(EmployeeActivity.this,"Koneksi Gagal ! 4",Toast.LENGTH_LONG).show();
             shimmerLayout.stopShimmerAnimation();
+            shimmerLayout.setVisibility(View.GONE);
+            wrongView.setVisibility(View.VISIBLE);
+
         }
     }
 

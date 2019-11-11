@@ -7,13 +7,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.pengenalanandroidmdb.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
@@ -37,6 +38,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.tvNameOffice.setText(hashMap.get("office_name"));
         holder.tvEmailOffice.setText(hashMap.get("office_email"));
         holder.tvPhoneOffice.setText(hashMap.get("cell_phone"));
+
+        Picasso.get().load(hashMap.get("base_url")).into(holder.imgOffice);
     }
 
     @Override
