@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp">
+
+    <RelativeLayout android:id="@+id/mainContainer" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:visibility="visible" android:layout_marginTop="35dp"
+        android:background="@color/biru">
+
+        <LinearLayout android:id="@+id/overviewContainer" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"
+            android:layout_centerInParent="false">
+
+            <TextView android:id="@+id/status" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="18dp"
+                android:layout_gravity="center" android:textColor="#ffff"
+                android:text="Clear Sky"/>
+            <TextView android:id="@+id/address" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="90dp"
+                android:fontFamily="sans-serif-thin" android:layout_gravity="center"
+                android:text="Jakarta" android:textColor="#ffff"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center">
+                <TextView android:id="@+id/temp" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="#ffff" android:text="30°C"/>
+                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+
+                <TextView android:id="@+id/updated_at" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textColor="#ffff" android:text="12 June 1970, 10:08 PM"/>
+                <Space android:layout_width="10dp" android:layout_height="wrap_content"/>
+
+                <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+                    android:textColor="#ffff" android:text="OpenWeather.org"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

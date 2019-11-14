@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1169B4</color>
+    <color name="colorPrimaryDark">#064274</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="red">#ff0000</color>
+    <color name="buttonColor">#C1009688</color>
+    <color name="lupa_password">#2196F3</color>
+    <color name="colorLogin">#005495</color>
+    <color name="colorEt">#117FDA</color>
+
+    <!--    warna dari rais-->
+    <color name="biru">#5CC3EF</color>
+    <color name="putih">#FFFFFF</color>
+    <color name="abu">#C4C4C4</color>
+    <color name="placeholder_color">#C9C9C9</color>
+</resources>
