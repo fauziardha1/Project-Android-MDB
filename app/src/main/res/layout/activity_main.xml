@@ -7,332 +7,414 @@
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/mdb"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="9pt"
-        android:orientation="vertical"
-        android:layout_gravity="center">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12pt"
-                    android:orientation="horizontal">
-
-
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/btn_karyawan"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="Data Karyawan"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <Button
-                                    android:id="@+id/btn_karyawan"
-                                    style="?android:attr/progressBarStyleHorizontal"
-                                    android:layout_width="75dp"
-                                    android:layout_height="75dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:background="@drawable/avatar"
-                                    android:indeterminate="false"
-                                    android:padding="13dp"
-                                    android:textStyle="bold" />
-                            </RelativeLayout>
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/btn_c"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="Form Cuti"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <Button
-                                    android:id="@+id/btn_c"
-                                    style="?android:attr/progressBarStyleHorizontal"
-                                    android:layout_width="75dp"
-                                    android:layout_height="75dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:background="@drawable/cuti"
-                                    android:indeterminate="false"
-                                    android:padding="16dp"
-                                    android:textStyle="bold" />
-                            </RelativeLayout>
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/btn_izin"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="Form Izin"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-                                <Button
-                                    android:id="@+id/btn_izin"
-                                    style="?android:attr/progressBarStyleHorizontal"
-                                    android:layout_width="75dp"
-                                    android:layout_height="75dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:background="@drawable/izin"
-                                    android:indeterminate="false"
-                                    android:padding="16dp"
-                                    android:textStyle="bold" />
-                            </RelativeLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="12pt"
-                    android:orientation="horizontal"
-                    android:paddingBottom="9dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/btn_kegiatan"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="Kegiatan Karyawan"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-                                <Button
-                                    android:id="@+id/btn_kegiatan"
-                                    style="?android:attr/progressBarStyleHorizontal"
-                                    android:layout_width="75dp"
-                                    android:layout_height="75dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="12dp"
-                                    android:background="@drawable/kegiatankaryawan"
-                                    android:indeterminate="false"
-                                    android:padding="12dp"
-                                    android:textStyle="bold" />
-                            </RelativeLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-
-
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/btn_setting"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="Setting"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-
-
-                                <Button
-                                    android:id="@+id/btn_setting"
-                                    style="?android:attr/progressBarStyleHorizontal"
-                                    android:layout_width="75dp"
-                                    android:layout_height="75dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="12dp"
-                                    android:background="@drawable/setting"
-                                    android:indeterminate="false"
-                                    android:padding="16dp"
-                                    android:textStyle="bold" />
-                            </RelativeLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center_horizontal"
-                        android:orientation="vertical">
-
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-
-
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent">
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/btn_berita"
-                                    android:layout_centerHorizontal="true"
-                                    android:text="Berita"
-                                    android:textSize="14sp"
-                                    android:textStyle="bold" />
-
-
-
-                                <Button
-                                    android:id="@+id/btn_berita"
-                                    style="?android:attr/progressBarStyleHorizontal"
-                                    android:layout_width="75dp"
-                                    android:layout_height="75dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="12dp"
-                                    android:background="@drawable/news"
-                                    android:indeterminate="false"
-                                    android:padding="17dp"
-                                    android:textStyle="bold" />
-                            </RelativeLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+
+           <ImageView
+               android:id="@+id/imageView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:src="@drawable/mdb"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"/>
+
+           <!--    tampilan cuaca-->
+           <RelativeLayout
+               android:id="@+id/mainContainer"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:visibility="visible"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:layout_marginTop="10dp"
+               android:background="@color/biru">
+
+               <LinearLayout
+                   android:id="@+id/overviewContainer"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_centerInParent="false">
+
+                   <TextView
+                       android:id="@+id/status"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="18dp"
+                       android:layout_gravity="center"
+                       android:textColor="#ffff"
+                       android:text="Clear Sky"/>
+                   <TextView
+                       android:id="@+id/address"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textSize="40sp"
+                       android:fontFamily="sans-serif-thin"
+                       android:layout_gravity="center"
+                       android:text="Jakarta"
+                       android:textColor="#ffff"/>
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="horizontal"
+                       android:gravity="center">
+                       <TextView
+                           android:layout_weight="1"
+                           android:id="@+id/temp"
+                           android:layout_marginStart="10dp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textColor="#ffff"
+                           android:text="30°C"/>
+
+                       <TextView
+                           android:layout_weight="1"
+                           android:id="@+id/updated_at"
+                           android:layout_marginEnd="10dp"
+                           android:gravity="right"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textColor="#ffff"
+                           android:text="12 June 1970, 10:08 PM"/>
+
+                   </LinearLayout>
+
+               </LinearLayout>
+
+           </RelativeLayout>
+           <!--    akhir tampilan cuaca-->
+
+           //main menu
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_margin="9pt"
+                   android:orientation="vertical"
+                   android:layout_gravity="center">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:layout_weight="1"
+                       android:orientation="vertical">
+
+
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+
+                           <LinearLayout
+                               android:layout_width="fill_parent"
+                               android:layout_height="match_parent"
+                               android:layout_marginTop="12pt"
+                               android:orientation="horizontal">
+
+                               <LinearLayout
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="match_parent"
+                                   android:layout_weight="1"
+                                   android:gravity="center_horizontal"
+                                   android:orientation="vertical">
+
+                                   <LinearLayout
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+                                       android:layout_weight="1"
+                                       android:gravity="center_horizontal"
+                                       android:orientation="vertical">
+
+                                       <RelativeLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_height="match_parent">
+
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:layout_below="@+id/btn_karyawan"
+                                               android:layout_centerHorizontal="true"
+                                               android:text="Data Karyawan"
+                                               android:textSize="14sp"
+                                               android:textStyle="bold" />
+
+                                           <Button
+                                               android:id="@+id/btn_karyawan"
+                                               style="?android:attr/progressBarStyleHorizontal"
+                                               android:layout_width="75dp"
+                                               android:layout_height="75dp"
+                                               android:layout_centerHorizontal="true"
+                                               android:background="@drawable/avatar"
+                                               android:indeterminate="false"
+                                               android:padding="13dp"
+                                               android:textStyle="bold" />
+                                       </RelativeLayout>
+
+                                   </LinearLayout>
+                               </LinearLayout>
+
+                               <LinearLayout
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:gravity="center_horizontal"
+                                   android:orientation="vertical">
+
+                                   <LinearLayout
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+                                       android:layout_weight="1"
+                                       android:gravity="center_horizontal"
+                                       android:orientation="vertical">
+
+                                       <RelativeLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_height="match_parent">
+
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:layout_below="@+id/btn_c"
+                                               android:layout_centerHorizontal="true"
+                                               android:text="Form Cuti"
+                                               android:textSize="14sp"
+                                               android:textStyle="bold" />
+
+                                           <Button
+                                               android:id="@+id/btn_c"
+                                               style="?android:attr/progressBarStyleHorizontal"
+                                               android:layout_width="75dp"
+                                               android:layout_height="75dp"
+                                               android:layout_centerHorizontal="true"
+                                               android:background="@drawable/cuti"
+                                               android:indeterminate="false"
+                                               android:padding="16dp"
+                                               android:textStyle="bold" />
+                                       </RelativeLayout>
+
+                                   </LinearLayout>
+                               </LinearLayout>
+
+                               <LinearLayout
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:gravity="center_horizontal"
+                                   android:orientation="vertical">
+
+
+
+                                   <LinearLayout
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content"
+                                       android:layout_weight="1"
+                                       android:gravity="center_horizontal"
+                                       android:orientation="vertical">
+                                       <RelativeLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_height="match_parent">
+
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:layout_below="@+id/btn_izin"
+                                               android:layout_centerHorizontal="true"
+                                               android:text="Form Izin"
+                                               android:textSize="14sp"
+                                               android:textStyle="bold" />
+
+                                           <Button
+                                               android:id="@+id/btn_izin"
+                                               style="?android:attr/progressBarStyleHorizontal"
+                                               android:layout_width="75dp"
+                                               android:layout_height="75dp"
+                                               android:layout_centerHorizontal="true"
+                                               android:background="@drawable/izin"
+                                               android:indeterminate="false"
+                                               android:padding="16dp"
+                                               android:textStyle="bold" />
+                                       </RelativeLayout>
+                                   </LinearLayout>
+                               </LinearLayout>
+                           </LinearLayout>
+
+
+                           <LinearLayout
+                               android:layout_width="fill_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="12pt"
+                               android:orientation="horizontal"
+                               android:paddingBottom="9dp">
+
+                               <LinearLayout
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:gravity="center_horizontal"
+                                   android:orientation="vertical">
+
+
+
+                                   <LinearLayout
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+                                       android:layout_weight="1"
+                                       android:gravity="center_horizontal"
+                                       android:orientation="vertical">
+
+
+
+                                       <RelativeLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_height="match_parent">
+
+
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:layout_below="@+id/btn_kegiatan"
+                                               android:layout_centerHorizontal="true"
+                                               android:text="Kegiatan Karyawan"
+                                               android:textSize="14sp"
+                                               android:textStyle="bold" />
+                                           <Button
+                                               android:id="@+id/btn_kegiatan"
+                                               style="?android:attr/progressBarStyleHorizontal"
+                                               android:layout_width="75dp"
+                                               android:layout_height="75dp"
+                                               android:layout_centerHorizontal="true"
+                                               android:layout_marginTop="12dp"
+                                               android:background="@drawable/kegiatankaryawan"
+                                               android:indeterminate="false"
+                                               android:padding="12dp"
+                                               android:textStyle="bold" />
+                                       </RelativeLayout>
+                                   </LinearLayout>
+                               </LinearLayout>
+
+
+
+                               <LinearLayout
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:gravity="center_horizontal"
+                                   android:orientation="vertical">
+
+
+
+                                   <LinearLayout
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+                                       android:layout_weight="1"
+                                       android:gravity="center_horizontal"
+                                       android:orientation="vertical">
+
+
+
+                                       <RelativeLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_height="match_parent">
+
+
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:layout_below="@+id/btn_setting"
+                                               android:layout_centerHorizontal="true"
+                                               android:text="Setting"
+                                               android:textSize="14sp"
+                                               android:textStyle="bold" />
+
+
+
+                                           <Button
+                                               android:id="@+id/btn_setting"
+                                               style="?android:attr/progressBarStyleHorizontal"
+                                               android:layout_width="75dp"
+                                               android:layout_height="75dp"
+                                               android:layout_centerHorizontal="true"
+                                               android:layout_marginTop="12dp"
+                                               android:background="@drawable/setting"
+                                               android:indeterminate="false"
+                                               android:padding="16dp"
+                                               android:textStyle="bold" />
+                                       </RelativeLayout>
+                                   </LinearLayout>
+                               </LinearLayout>
+                               <LinearLayout
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:layout_weight="1"
+                                   android:gravity="center_horizontal"
+                                   android:orientation="vertical">
+
+
+
+                                   <LinearLayout
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"
+                                       android:layout_weight="1"
+                                       android:gravity="center_horizontal"
+                                       android:orientation="vertical">
+
+
+
+                                       <RelativeLayout
+                                           android:layout_width="match_parent"
+                                           android:layout_height="match_parent">
+
+
+                                           <TextView
+                                               android:layout_width="wrap_content"
+                                               android:layout_height="wrap_content"
+                                               android:layout_below="@+id/btn_berita"
+                                               android:layout_centerHorizontal="true"
+                                               android:text="Berita"
+                                               android:textSize="14sp"
+                                               android:textStyle="bold" />
+
+
+
+                                           <Button
+                                               android:id="@+id/btn_berita"
+                                               style="?android:attr/progressBarStyleHorizontal"
+                                               android:layout_width="75dp"
+                                               android:layout_height="75dp"
+                                               android:layout_centerHorizontal="true"
+                                               android:layout_marginTop="12dp"
+                                               android:background="@drawable/news"
+                                               android:indeterminate="false"
+                                               android:padding="17dp"
+                                               android:textStyle="bold" />
+                                       </RelativeLayout>
+                                   </LinearLayout>
+                               </LinearLayout>
+                           </LinearLayout>
+                       </LinearLayout>
+                   </LinearLayout>
+               </LinearLayout>
+
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="100dp"/>
+
+           //akhir main menu
+
+       </LinearLayout>
+
+
+   </ScrollView>
+
+
 </LinearLayout>
