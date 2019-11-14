@@ -59,11 +59,11 @@ public class ListAdapter extends BaseAdapter {
                 if(convertView == null)
                     view = inflater.inflate(R.layout.lv_employee_item,null);
 
-                TextView tvEmployeeName = view.findViewById(R.id.tvEmployeeName);
-                TextView tvEmployeeNumber = view.findViewById(R.id.tvEmployeeNumber);
-                TextView tvEmployeeAddress = view.findViewById(R.id.tvEmployeeAddress);
-                TextView tvEmployeeGender = view.findViewById(R.id.tvEmployeeGender);
-                ImageView imgEmployee = view.findViewById(R.id.img_employee);
+                TextView tvEmployeeName     = view.findViewById(R.id.tvEmployeeName);
+                TextView tvEmployeeNumber   = view.findViewById(R.id.tvEmployeeNumber);
+                TextView tvEmployeeAddress  = view.findViewById(R.id.tvEmployeeAddress);
+                TextView tvEmployeeGender   = view.findViewById(R.id.tvEmployeeGender);
+                ImageView imgEmployee       = view.findViewById(R.id.img_employee);
 
                 HashMap<String,String> empList = new HashMap<String,String>();
 

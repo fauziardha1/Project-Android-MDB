@@ -28,14 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         imgView = findViewById(R.id.imageView);
 
-        String url = "https://i.imgur.com/lgI7maQ.jpg";
-
-        // Image link from internet
-        new DownloadImageFromInternet(imgView)
-                .execute(url);
-
-
-
 
 
     }
