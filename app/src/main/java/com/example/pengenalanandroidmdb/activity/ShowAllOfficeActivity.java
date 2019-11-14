@@ -39,6 +39,7 @@ public class ShowAllOfficeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_all_office);
+        setTitle("Office");
 
         recyclerView = findViewById(R.id.recycler);
         imgbtnBack = findViewById(R.id.imgBtnBack);

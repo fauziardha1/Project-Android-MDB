@@ -20,29 +20,5 @@
         android:id="@+id/keluar"
         android:title="Keluar"
         app:showAsAction="never"/>
-   <item
-       android:id="@+id/th"
-       android:title="group"
-       app:showAsAction="never"
-       >
-       <group
-           android:id="@+id/group"
-           android:checkableBehavior="all"
-           android:enabled="true"
-           android:visible="true"
-
-           >
-           <item
-               android:id="@+id/jkj"
-               android:title="jkj"
-               app:showAsAction="never"/>
-           <item
-               android:id="@+id/fg"
-               android:title="fg"
-               app:showAsAction="never"/>
-
-       </group>
-
-   </item>
 
 </menu>

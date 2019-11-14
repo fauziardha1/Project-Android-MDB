@@ -9,11 +9,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.androdocs.httprequest.HttpRequest;
+import com.example.pengenalanandroidmdb.CutiActivity;
+import com.example.pengenalanandroidmdb.IzinActivity;
 import com.example.pengenalanandroidmdb.R;
 
 import org.json.JSONException;
@@ -27,7 +30,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     private TextView inputUsername,inputPassword;
-    private Button btnLogin;
+    private Button btnLogin, btnEmpl, btnCuti, btnIzin, btnSetting;
     private ImageView imgView;
     private String CITY = "Jakarta,ID";
     private String API = "5743929c4a396e392506b1896ab261b0";
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("Multi Inti Digital Bisnis");
 
         imgView = findViewById(R.id.imageView);
         //weather
@@ -44,6 +48,40 @@ public class MainActivity extends AppCompatActivity {
         updated_atTxt = findViewById(R.id.updated_at);
         statusTxt = findViewById(R.id.status);
         tempTxt     = findViewById(R.id.temp);
+
+        //activity lain2
+        btnEmpl = findViewById(R.id.btn_karyawan);
+        btnCuti = findViewById(R.id.btn_c);
+        btnIzin = findViewById(R.id.btn_izin);
+        btnSetting = findViewById(R.id.btn_setting);
+
+        btnEmpl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, EmployeeActivity.class));
+            }
+        });
+
+        btnCuti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, CutiActivity.class));
+            }
+        });
+
+        btnIzin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, IzinActivity.class));
+            }
+        });
+
+        btnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ForgotPasswordActivity.class));
+            }
+        });
 
         //jalankan api cuaca
         new weatherTask().execute();

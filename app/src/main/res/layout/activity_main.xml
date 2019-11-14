@@ -18,8 +18,8 @@
 
            <ImageView
                android:id="@+id/imageView"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
+               android:layout_width="300dp"
+               android:layout_height="150dp"
                android:layout_gravity="center"
                android:src="@drawable/mdb"
                app:layout_constraintBottom_toBottomOf="parent"
@@ -31,12 +31,12 @@
            <RelativeLayout
                android:id="@+id/mainContainer"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="100dp"
                android:visibility="visible"
                android:layout_marginStart="20dp"
                android:layout_marginEnd="20dp"
                android:layout_marginTop="10dp"
-               android:background="@color/biru">
+               android:background="@drawable/weather">
 
                <LinearLayout
                    android:id="@+id/overviewContainer"
@@ -94,11 +94,11 @@
            </RelativeLayout>
            <!--    akhir tampilan cuaca-->
 
-           //main menu
+           <!--main menu-->
                <LinearLayout
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
-                   android:layout_margin="9pt"
+                   android:layout_margin="9dp"
                    android:orientation="vertical"
                    android:layout_gravity="center">
 
@@ -107,8 +107,6 @@
                        android:layout_height="match_parent"
                        android:layout_weight="1"
                        android:orientation="vertical">
-
-
 
                        <LinearLayout
                            android:layout_width="match_parent"
@@ -254,7 +252,7 @@
                                android:layout_height="wrap_content"
                                android:layout_marginTop="12pt"
                                android:orientation="horizontal"
-                               android:paddingBottom="9dp">
+                               android:paddingBottom="0dp">
 
                                <LinearLayout
                                    android:layout_width="wrap_content"
@@ -276,7 +274,8 @@
 
                                        <RelativeLayout
                                            android:layout_width="match_parent"
-                                           android:layout_height="match_parent">
+                                           android:layout_height="match_parent"
+                                           android:layout_weight="1">
 
 
                                            <TextView
@@ -295,8 +294,6 @@
                                                android:layout_centerHorizontal="true"
                                                android:layout_marginTop="12dp"
                                                android:background="@drawable/kegiatankaryawan"
-                                               android:indeterminate="false"
-                                               android:padding="12dp"
                                                android:textStyle="bold" />
                                        </RelativeLayout>
                                    </LinearLayout>
@@ -409,7 +406,7 @@
                android:layout_width="match_parent"
                android:layout_height="100dp"/>
 
-           //akhir main menu
+           <!--akhir main menu-->
 
        </LinearLayout>
 
