@@ -32,15 +32,9 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Halaman Office"-->
-<!--        android:textSize="30sp"-->
-<!--        android:gravity="center"/>-->
-
     <include
         android:id="@+id/wrongViewOffice"
+        android:visibility="gone"
         layout="@layout/somethings_wrong"/>
 
 
@@ -56,14 +50,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <include layout="@layout/placeholder_lv_employee_item"/>
-            <include layout="@layout/placeholder_lv_employee_item"/>
-            <include layout="@layout/placeholder_lv_employee_item"/>
-            <include layout="@layout/placeholder_lv_employee_item"/>
-            <include layout="@layout/placeholder_lv_employee_item"/>
-            <include layout="@layout/placeholder_lv_employee_item"/>
-            <include layout="@layout/placeholder_lv_employee_item"/>
-            <include layout="@layout/placeholder_lv_employee_item"/>
+            <include layout="@layout/placeholder_lv_office_item"/>
+            <include layout="@layout/placeholder_lv_office_item"/>
+            <include layout="@layout/placeholder_lv_office_item"/>
 
         </LinearLayout>
     </io.supercharge.shimmerlayout.ShimmerLayout>

@@ -3,7 +3,6 @@ package com.example.pengenalanandroidmdb.activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -16,7 +15,6 @@ import android.widget.TextView;
 
 import com.androdocs.httprequest.HttpRequest;
 import com.example.pengenalanandroidmdb.R;
-import com.example.pengenalanandroidmdb.model.DownloadImageFromInternet;
 
 import org.json.JSONException;
 import org.json.JSONObject;
