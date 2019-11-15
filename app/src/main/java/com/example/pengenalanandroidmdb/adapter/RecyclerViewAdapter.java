@@ -20,14 +20,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private Context context;
     private ArrayList<HashMap<String, String>> arrayList;
-    private View.OnClickListener onItemClickListener;
 
     public RecyclerViewAdapter(Context context, ArrayList<HashMap<String, String>> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
     }
 
-
+    private View.OnClickListener onItemClickListener;
 
     public void setOnItemClickListener(View.OnClickListener clickListener) {
         onItemClickListener = clickListener;
@@ -65,6 +64,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             tvNameOffice = itemView.findViewById(R.id.tvNameOffice);
             tvEmailOffice = itemView.findViewById(R.id.tvEmailOffice);
             tvPhoneOffice = itemView.findViewById(R.id.tvPhoneOffice);
+
+            itemView.setTag(this);
+            itemView.setOnClickListener(onItemClickListener);
         }
     }
 }

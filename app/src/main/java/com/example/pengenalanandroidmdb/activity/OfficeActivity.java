@@ -23,7 +23,7 @@ public class OfficeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_office);
-//
+
         tvName = findViewById(R.id.tvName);
         tvEmail = findViewById(R.id.tvEmail);
         tvCell = findViewById(R.id.tvCell);

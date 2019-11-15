@@ -58,7 +58,7 @@ public class CutiActivity extends AppCompatActivity {
                         etJml.getText().clear();
                         etTgl.getText().clear();
                         etAlasan.getText().clear();
-                        Toast.makeText(CutiActivity.this,"Surat Izin Dikirim ke HRD",Toast.LENGTH_LONG).show();
+                        Toast.makeText(CutiActivity.this,"Surat Curi Dikirim ke HRD",Toast.LENGTH_LONG).show();
                     }
                 });
 

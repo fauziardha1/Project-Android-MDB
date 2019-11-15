@@ -96,7 +96,7 @@ public class ShowAllOfficeActivity extends AppCompatActivity {
                                         new Intent(ShowAllOfficeActivity.this, OfficeActivity.class)
                                                 .putExtra("office_name", arrayList.get(position).get("office_name"))
                                                 .putExtra("office_address", arrayList.get(position).get("office_address"))
-                                                .putExtra("office_description", arrayList.get(position).get(""))
+                                                .putExtra("office_description", arrayList.get(position).get("office_description"))
                                                 .putExtra("cell_phone", arrayList.get(position).get("cell_phone"))
                                                 .putExtra("email", arrayList.get(position).get("email"))
                                                 .putExtra("location_gps", arrayList.get(position).get("location_gps"))
