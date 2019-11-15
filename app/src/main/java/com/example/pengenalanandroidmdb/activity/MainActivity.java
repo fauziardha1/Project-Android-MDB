@@ -15,8 +15,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.androdocs.httprequest.HttpRequest;
-import com.example.pengenalanandroidmdb.CutiActivity;
-import com.example.pengenalanandroidmdb.IzinActivity;
 import com.example.pengenalanandroidmdb.R;
 
 import org.json.JSONException;

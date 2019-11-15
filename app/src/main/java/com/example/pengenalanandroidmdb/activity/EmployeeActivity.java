@@ -1,10 +1,18 @@
 package com.example.pengenalanandroidmdb.activity;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import io.supercharge.shimmerlayout.ShimmerLayout;
 
@@ -14,6 +22,7 @@ import com.example.pengenalanandroidmdb.service.RestProcess;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 
@@ -59,6 +68,59 @@ public class EmployeeActivity extends AppCompatActivity {
 
         shimmerLayout.startShimmerAnimation();             //menjalankan animasi dari shimmerLayout
         getDataKaryawan(lvDataKaryawan);
+
+
+        lvDataKaryawan.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                HashMap<String,String> item = new HashMap<String,String>();
+                item = (HashMap<String, String>) adapter.getItem(position);
+                final AlertDialog dialogBuilder = new AlertDialog.Builder(EmployeeActivity.this).create();
+                LayoutInflater    inflater       = EmployeeActivity.this.getLayoutInflater();
+                View dialogView                 = inflater.inflate(R.layout.employee_detail,null);
+
+                ImageView img = dialogView.findViewById(R.id.profile_image);
+                TextView nama,alamat,nip,gender,tempatLahir,tanggalLahir,golDarah,agama,status;
+                nama          = dialogView.findViewById(R.id.employee_detail_nama);
+                nip           = dialogView.findViewById(R.id.employee_detail_nip);
+                alamat        = dialogView.findViewById(R.id.employee_detail_alamat);
+                gender        = dialogView.findViewById(R.id.employee_detail_gender);
+                tempatLahir   = dialogView.findViewById(R.id.employee_detail_tempat_lahir);
+                tanggalLahir  = dialogView.findViewById(R.id.employee_detail_tanggal_lahir);
+                golDarah      = dialogView.findViewById(R.id.employee_detail_Gol_darah);
+                agama         = dialogView.findViewById(R.id.employee_detail_agama);
+                status        = dialogView.findViewById(R.id.employee_detail_status);
+
+
+                Button btn_tutup = dialogView.findViewById(R.id.btn_tutup);
+                btn_tutup.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        dialogBuilder.dismiss();
+                    }
+                });
+
+                Picasso.get().load(item.get("base_url")).into(img);
+                nama.setText(item.get("employee_name"));
+                nip.setText(item.get("nomor_induk_pegawai"));
+                alamat.setText(item.get("address"));
+                gender.setText(item.get("gender"));
+                tempatLahir.setText(item.get("tempat_lahir"));
+                tanggalLahir.setText(item.get("tanggal_lahir"));
+                golDarah.setText(item.get("gol_darah"));
+                agama.setText(item.get("agama"));
+                status.setText(item.get("status_perkawinan"));
+
+
+
+
+                dialogBuilder.setView(dialogView);
+                dialogBuilder.setCancelable(false);
+                dialogBuilder.show();
+            }
+
+
+        });
     }
 
 
@@ -140,6 +202,18 @@ public class EmployeeActivity extends AppCompatActivity {
             wrongView.setVisibility(View.VISIBLE);
 
         }
+    }
+
+
+    public void employeeDetailPopUp(){
+        final AlertDialog dialogBuilder = new AlertDialog.Builder(this).create();
+        LayoutInflater    inflater       = this.getLayoutInflater();
+        View dialogView                 = inflater.inflate(R.layout.lv_office_item,null);
+
+        dialogBuilder.setView(dialogView);
+        dialogBuilder.setCancelable(false);
+        dialogBuilder.show();
+
     }
 
 }

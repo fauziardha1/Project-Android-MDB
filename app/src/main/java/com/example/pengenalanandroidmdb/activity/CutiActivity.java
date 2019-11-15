@@ -1,4 +1,4 @@
-package com.example.pengenalanandroidmdb;
+package com.example.pengenalanandroidmdb.activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.pengenalanandroidmdb.R;
 
 public class CutiActivity extends AppCompatActivity {
     EditText etNama, etNip, etJabatan, etJml, etTgl, etAlasan;

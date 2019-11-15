@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class ListAdapter extends BaseAdapter {
 
     private Activity activity;                      // untuk menampung activity yang memanggil kelas ini
-    private ArrayList<HashMap<String,String>>data;  // untuk menyimpan data
+     ArrayList<HashMap<String,String>>data;  // untuk menyimpan data
     private int list_position =0;                   //  untuk indeks data pada json dimulai dari 0
     private static LayoutInflater inflater = null;  // inflater berguna untuk mendefinisikan layout yang akan dipakai
     private String PACKAGE_NAME;                    // untuk menampung nama folder atau package

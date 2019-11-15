@@ -1,4 +1,4 @@
-package com.example.pengenalanandroidmdb;
+package com.example.pengenalanandroidmdb.activity;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.pengenalanandroidmdb.activity.LoginActivity;
+import com.example.pengenalanandroidmdb.R;
 
 public class IzinActivity extends AppCompatActivity {
     EditText etNama, etNip, etJabatan, etTgl, etAlasan;
