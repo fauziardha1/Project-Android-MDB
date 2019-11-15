@@ -1,8 +1,5 @@
 package com.example.pengenalanandroidmdb.activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -13,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.androdocs.httprequest.HttpRequest;
 import com.example.pengenalanandroidmdb.R;
@@ -28,7 +28,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     private TextView inputUsername,inputPassword;
-    private Button btnLogin, btnEmpl, btnCuti, btnIzin, btnSetting;
+    private Button btnLogin, btnEmpl, btnCuti, btnIzin, btnSetting, btn_kegiatan;
     private ImageView imgView;
     private String CITY = "Jakarta,ID";
     private String API = "5743929c4a396e392506b1896ab261b0";
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         btnCuti = findViewById(R.id.btn_c);
         btnIzin = findViewById(R.id.btn_izin);
         btnSetting = findViewById(R.id.btn_setting);
+        btn_kegiatan = findViewById(R.id.btn_kegiatan);
 
         btnEmpl.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +79,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, ForgotPasswordActivity.class));
+            }
+        });
+        btn_kegiatan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, KegiatanActivity.class));
             }
         });
 

@@ -10,6 +10,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -34,12 +35,12 @@ public class ShowAllOfficeActivity extends AppCompatActivity {
     ImageButton imgbtnBack;
     ShimmerLayout shimmerLayout;
     private View wrongView ;
+    RecyclerViewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_all_office);
-        setTitle("Office");
 
         recyclerView = findViewById(R.id.recycler);
         imgbtnBack = findViewById(R.id.imgBtnBack);
@@ -67,7 +68,7 @@ public class ShowAllOfficeActivity extends AppCompatActivity {
                         JsonObject object = response.body();
 
                         JsonArray array = object.get("result").getAsJsonArray();
-                        ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
+                        final ArrayList<HashMap<String, String>> arrayList = new ArrayList<>();
                         for (int i = 0; i < array.size(); i++) {
                             JsonObject mObject = array.get(i).getAsJsonObject();
                             HashMap<String, String> item = new HashMap<>();
@@ -82,7 +83,27 @@ public class ShowAllOfficeActivity extends AppCompatActivity {
                         }
                         recyclerView.setLayoutManager(new LinearLayoutManager(ShowAllOfficeActivity.this));
                         recyclerView.setHasFixedSize(true);
-                        recyclerView.setAdapter(new RecyclerViewAdapter(ShowAllOfficeActivity.this, arrayList));
+                        adapter = new RecyclerViewAdapter(ShowAllOfficeActivity.this, arrayList);
+                        recyclerView.setAdapter(adapter);
+                        adapter.setOnItemClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                RecyclerViewAdapter.ViewHolder holder = (RecyclerViewAdapter.ViewHolder) v.getTag();
+
+                                int position = holder.getAdapterPosition();
+
+                                startActivity(
+                                        new Intent(ShowAllOfficeActivity.this, OfficeActivity.class)
+                                                .putExtra("office_name", arrayList.get(position).get("office_name"))
+                                                .putExtra("office_address", arrayList.get(position).get("office_address"))
+                                                .putExtra("office_description", arrayList.get(position).get(""))
+                                                .putExtra("cell_phone", arrayList.get(position).get("cell_phone"))
+                                                .putExtra("email", arrayList.get(position).get("email"))
+                                                .putExtra("location_gps", arrayList.get(position).get("location_gps"))
+                                                .putExtra("base_url", arrayList.get(position).get("base_url"))
+                                );
+                            }
+                        });
                     } else {
                         Toast.makeText(ShowAllOfficeActivity.this, "Error", Toast.LENGTH_SHORT).show();
                     }
