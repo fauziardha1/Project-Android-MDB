@@ -50,7 +50,7 @@ public class OfficeActivity extends AppCompatActivity {
         btnLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/place" + location_gps)));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/place/" + location_gps)));
             }
         });
 
